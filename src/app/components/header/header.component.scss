@@ -1,0 +1,12 @@
+.header {
+  background-color: white;
+  height: 80px;
+  border-bottom: darkgray 1px dotted;
+  margin-bottom: 36px;
+  margin-top: 36px;
+
+  & small {
+    float: right;
+    font-size: xx-small;
+  }
+}

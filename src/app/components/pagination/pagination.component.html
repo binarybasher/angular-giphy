@@ -1,0 +1,13 @@
+<div class="row pt-2" *ngIf="totalPages > 0">
+    <div class="col-12 text-center text-break">
+        Page:
+        <ng-container *ngFor="let i of range(totalPages); let counter=index;">
+            <ng-container *ngIf="counter !== page">
+                <a tabindex="0" class="text-secondary p-2 page-number" (keydown)="onKeyDown($event, counter)" (click)="onSelectPage(counter)" [attr.aria-label]="'Goto page number '+(counter+1)">{{counter+1}}</a>
+            </ng-container>
+            <ng-container *ngIf="counter === page">
+                <span class="text-primary p-2" aria-label="Current page">{{counter+1}}</span>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>

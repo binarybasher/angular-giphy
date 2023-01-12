@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-12 col-lg-8 offset-lg-2">
+        <form #f="ngForm">
+            <div class="input-group mb-3">
+                <input autofocus name="query" type="text" class="form-control" placeholder="search text" aria-label="Enter search text"
+                       aria-describedby="button-search" [(ngModel)]="query" [disabled]="loading">
+                <button class="btn btn-primary" type="submit" id="button-search" (click)="onSearch()" [disabled]="isSearchDisabled">
+                    <ng-container *ngIf="loading">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        Loading...
+                    </ng-container>
+                    <ng-container *ngIf="!loading">
+                        Search
+                    </ng-container>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

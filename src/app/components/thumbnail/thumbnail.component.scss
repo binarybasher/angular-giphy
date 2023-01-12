@@ -1,0 +1,41 @@
+// define media query size adjustments, todo will likely need refactoring
+:host {
+  --size-divisor: 3.5;
+}
+
+@media (min-width: 576px) {
+  :host {
+    --size-divisor: 3;
+  }
+}
+@media (min-width: 768px) {
+  :host {
+    --size-divisor: 2.5;
+  }
+}
+@media (min-width: 992px) {
+  :host {
+    --size-divisor: 2;
+  }
+}
+@media (min-width: 1200px) {
+  :host {
+    --size-divisor: 1.5;
+  }
+}
+
+// implement base card and image styles
+.card {
+  border: unset;
+  width: calc(100px * var(--size-divisor));
+}
+
+.card-img {
+  border: white solid 1px;
+  padding: 1px;
+
+  &:hover, &:focus {
+    cursor: pointer;
+    border-color: black;
+  }
+}

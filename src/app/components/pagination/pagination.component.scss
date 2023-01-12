@@ -1,0 +1,8 @@
+.page-number {
+  text-decoration: unset;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
